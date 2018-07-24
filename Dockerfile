@@ -10,6 +10,7 @@ RUN apt update && \
       git \
       bzip2 \
       curl \
+      openssh-client \
       wget && \
     apt clean && \
     cd /opt && \
