@@ -9,10 +9,11 @@ RUN apt update && \
       build-essential \
       git \
       bzip2 \
-      curl && \
+      curl \
+      wget && \
     apt clean && \
     cd /opt && \
-    curl -O https://developer.arm.com/-/media/Files/downloads/gnu-rm/6-2016q4/gcc-arm-none-eabi-6_2-2016q4-20161216-linux.tar.bz2 && \
+    wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/6-2016q4/gcc-arm-none-eabi-6_2-2016q4-20161216-linux.tar.bz2 && \
     tar -xjf *.bz2 && \
     rm *.bz2 && \
     mv gcc-arm-none* gcc-arm-none-eabi
